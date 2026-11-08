@@ -1,0 +1,57 @@
+/* Pferderennen */
+.rc-field{background:linear-gradient(180deg,#0f3d26,#082416);border:1px solid #2fd67b44;border-radius:20px;padding:10px 12px;margin:10px 0 6px;box-shadow:inset 0 0 30px #0006,0 10px 30px #0006}
+.rc-fh{display:grid;grid-template-columns:1fr 64px 56px;font-size:10px;font-weight:900;letter-spacing:.18em;color:#7dffb5aa;padding:0 0 6px 40px}
+.rc-fh span:nth-child(n+2){text-align:center}
+.rc-h{display:grid;grid-template-columns:30px 1fr 64px 56px;align-items:center;gap:10px;padding:7px 0;border-top:1px solid #ffffff10}
+.rc-h b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rc-no{--s:#ff3b5c;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--s);color:#fff;font-weight:900;font-size:14px;border:2px solid #fff;box-shadow:0 2px 0 #0008,0 0 10px color-mix(in srgb,var(--s) 60%,transparent);text-shadow:0 1px 1px #0008;flex:none}
+.rc-form{color:var(--gold);font-size:12px;letter-spacing:-1px;text-align:center}
+.rc-form i{color:#ffffff26;font-style:normal}
+.rc-odds{font-weight:900;font-size:16px;text-align:center;background:#000a;border:1px solid #f7c94866;border-radius:10px;padding:4px 0;color:var(--gold);font-variant-numeric:tabular-nums}
+.rc-pick{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin:4px 0 8px}
+.rc-pb{--s:#ff3b5c;aspect-ratio:1;border-radius:50%;border:2px solid #ffffff55;background:color-mix(in srgb,var(--s) 35%,#0a0618);color:#fff;font-weight:900;font-size:17px;padding:0;transition:transform .1s}
+.rc-pb.on{background:var(--s);border-color:#fff;transform:scale(1.12);box-shadow:0 0 16px var(--s),0 3px 0 #0008}
+.rc-pay{font-size:12px;color:var(--mut);margin-top:2px}
+.rc-pay em{font-style:normal;color:var(--gold);font-weight:900}
+.betamt>div>b{font-size:28px;font-variant-numeric:tabular-nums}
+
+.rc-wrap{position:fixed;inset:0;display:flex;flex-direction:column;background:#07050d;overflow:hidden;touch-action:none}
+.rc-top{display:flex;align-items:center;gap:8px;padding:calc(8px + env(safe-area-inset-top)) 10px 8px}
+.rc-x{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid #ffffff33;background:#0008;color:#fff;font-size:15px;padding:0}
+.rc-x.armed{width:auto;padding:0 12px;border-radius:18px;border-color:var(--bad);font-weight:800;font-size:13px}
+.rc-tick{flex:1;min-width:0;height:36px;display:flex;align-items:center;padding:0 14px;border-radius:12px;background:linear-gradient(90deg,#1a0f2e,#2c1250);border:1px solid #f7c94855;box-shadow:0 0 18px #ff2bd622;overflow:hidden}
+.rc-tick span{font-weight:900;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff}
+.rc-tick span.in{animation:rcTick .35s cubic-bezier(.2,1.4,.4,1)}
+.rc-stage{position:relative;flex:1;min-height:200px;margin:0 8px;border-radius:22px;overflow:hidden;border:4px solid #3b2410;box-shadow:inset 0 0 0 2px #c9971c88,0 12px 30px #000a}
+.rc-cv{position:absolute;inset:0;width:100%;height:100%}
+.rc-big{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-size:min(20vw,84px);font-weight:900;font-style:italic;color:#fff;opacity:0;pointer-events:none;text-shadow:0 4px 0 #000a,0 0 30px #000;padding:0 10px;line-height:1.05}
+.rc-big.on{opacity:1;animation:rcBig .5s cubic-bezier(.2,1.6,.4,1)}
+.rc-big.go{color:#7dffb5;text-shadow:0 0 30px #2fd67b,0 4px 0 #04331a}
+.rc-big.photo{font-size:min(10vw,44px);color:#fff;background:#000c;padding:14px 0;letter-spacing:.06em}
+.rc-big.win{font-size:min(9vw,40px);background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #6b4300) drop-shadow(0 0 20px #f7c948aa);text-shadow:none}
+.rc-board{position:relative;flex:none;height:calc(6 * 36px + 12px);margin:8px 8px calc(8px + env(safe-area-inset-bottom));padding:6px 0;border-radius:18px;background:linear-gradient(180deg,#17112a,#0e0a1c);border:1px solid #ffffff14}
+.rc-row{position:absolute;left:6px;right:6px;height:34px;margin-top:6px;display:flex;align-items:center;gap:8px;padding:0 10px;border-radius:12px;transition:top .35s cubic-bezier(.3,1.3,.5,1),background .3s}
+.rc-row.lead{background:linear-gradient(90deg,#f7c94833,transparent)}
+.rc-rk{width:16px;font-weight:900;color:var(--mut);font-variant-numeric:tabular-nums}
+.rc-row.lead .rc-rk{color:var(--gold)}
+.rc-row .rc-no{width:24px;height:24px;font-size:12px}
+.rc-row b{flex:1;min-width:0;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rc-bets{display:flex;gap:3px}
+.rc-bets i{width:10px;height:10px;border-radius:50%;border:1px solid #000a}
+.rc-gap{min-width:58px;text-align:right;font-weight:800;font-size:12.5px;color:#ffffffb0;font-variant-numeric:tabular-nums}
+.rc-row.lead .rc-gap{color:var(--gold)}
+.rc-flash{display:none}
+
+.rc-podium{display:grid;grid-template-columns:1fr 1.15fr 1fr;align-items:end;gap:8px;margin:18px 0 6px}
+.rc-step{text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;animation:rcRise .6s cubic-bezier(.2,1.3,.4,1) both}
+.rc-step.s1{animation-delay:.25s}.rc-step.s3{animation-delay:.1s}
+.rc-ph{font-size:46px;transform:scaleX(-1);filter:drop-shadow(0 6px 8px #0009)}
+.rc-step.s1 .rc-ph{font-size:62px}
+.rc-step b{font-size:13px;line-height:1.15;min-height:2.3em}
+.rc-block{width:100%;border-radius:14px 14px 4px 4px;display:grid;place-items:center;font-size:30px;font-weight:900;color:#2a1700;box-shadow:inset 0 1px 0 #fff8,0 10px 24px #0008}
+.rc-step.s1 .rc-block{height:110px;background:var(--goldgrad)}
+.rc-step.s2 .rc-block{height:78px;background:linear-gradient(180deg,#ffffff,#c7cbd6 50%,#8e94a3)}
+.rc-step.s3 .rc-block{height:58px;background:linear-gradient(180deg,#ffc89a,#cd7f32 50%,#8a4f1c)}
+@keyframes rcTick{from{transform:translateY(100%);opacity:0}}
+@keyframes rcBig{from{transform:translateY(-50%) scale(2.2);opacity:0}}
+@keyframes rcRise{from{transform:translateY(60px);opacity:0}}
